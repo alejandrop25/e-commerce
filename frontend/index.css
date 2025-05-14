@@ -1,0 +1,8 @@
+.header{
+    display: flex;
+}
+.header > .header__home-bar{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
