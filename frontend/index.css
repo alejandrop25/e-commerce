@@ -12,6 +12,7 @@
     gap: 70px;
     list-style-type: none;
     font-size: 22px;
+    margin-top: 25px;
 }
 .header > .header__home-bar > li > .header__home-bar-item{
     color: black;
@@ -35,9 +36,19 @@
 }
 .main-container{
     width: 900px;
-    margin: 100px 0 0 350px;
+    margin: 150px 0 0 200px;
     border-radius: 10px;
+    display: flex;
 }
-.main-container > .ca{
+.main-container > .carousel-custom{
     border-radius: 10px;
+    overflow: hidden;
+    height: 300px;
+    width: 1200px;
+    flex: 0 0 auto;
+}
+.main-container > .main-container__design{
+    height: 300px;
+    width: 520px;
+    flex: 0 0 auto;
 }
