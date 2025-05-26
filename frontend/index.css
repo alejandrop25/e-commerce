@@ -82,7 +82,9 @@ footer{
 .products-container > .products-container__filters{
     border: 1px rgba(201, 201, 201, 0.808) solid;
     border-radius: 20px;
-    background-color: rgba(231, 164, 164, 0.507);
+    font-family: "Bebas Neue";
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.808);
     width: 250px;
     margin: 90px 0 0 980px;
     /* position: relative; */
@@ -90,10 +92,12 @@ footer{
     padding: 30px;
     overflow: hidden;
     backdrop-filter: blur(10px);
+    -webkit-box-shadow: 1px 2px 12px 0px rgba(0,0,0,0.58); 
+    box-shadow: 1px 2px 12px 0px rgba(0,0,0,0.58);
 }
 .products-container > .products-container__items > .card{
     max-width: 300px;
-    min-height: 400px;
+    min-height: 450px;
 }
 .products-container > .products-container__items > .card > .card-body{
     max-height: 200px;
