@@ -17,6 +17,8 @@ footer{
     display: flex;
     gap: 70px;
     list-style-type: none;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 200;
     font-size: 22px;
     font-weight: 450;
     margin-top: 25px;

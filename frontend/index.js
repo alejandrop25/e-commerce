@@ -40,3 +40,31 @@ document.querySelectorAll('input[name="priceFilter"]').forEach(radio => {
       });
     });
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const botoesCarrinho = document.querySelectorAll(".btn-carrinho");
+  
+    botoesCarrinho.forEach((btn, index) => {
+      btn.addEventListener("click", function () {
+        const card = btn.closest(".card");
+        const nome = card.querySelector(".card-title").textContent;
+        const preco = card.querySelector(".card-text").textContent;
+        const imagem = card.querySelector("img").getAttribute("src");
+  
+        const item = { id: `produto-${index}`, nome, preco, imagem, quantidade: 1 };
+  
+        let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+  
+        const itemExistente = carrinho.find(prod => prod.nome === item.nome && prod.preco === item.preco);
+  
+        if (itemExistente) {
+          itemExistente.quantidade += 1;
+        } else {
+          carrinho.push(item);
+        }
+  
+        localStorage.setItem("carrinho", JSON.stringify(carrinho));
+        alert("Produto adicionado ao carrinho!");
+      });
+    });
+  });

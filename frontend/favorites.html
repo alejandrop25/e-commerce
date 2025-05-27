@@ -29,7 +29,7 @@
             <a href="./favorites.html" class="header__buttons-link" aria-label="Favorites">
                 <i class="fa-solid fa-heart fa-2x header__favorites"></i>
               </a>
-              <a href="#" class="header__buttons-link" aria-label="Shopping Cart">
+              <a href="./cart.html" class="header__buttons-link" aria-label="Shopping Cart">
                 <i class="fa-solid fa-cart-shopping fa-2x header__cart"></i>
               </a>
               <a href="#" class="header__buttons-link" aria-label="User Profile">
@@ -38,7 +38,7 @@
         </div>
     </div>
     <div class="container mt-4">
-        <h1>Meus Favoritos</h1>
+        <h1>Favorites</h1>
         <div id="favoritos-container" class="row"></div>
     </div>
     <footer>
@@ -52,7 +52,7 @@
           const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
     
           if (favoritos.length === 0) {
-            container.innerHTML = "<p>Nenhum item nos favoritos.</p>";
+            container.innerHTML = "<p>Empty.</p>";
             return;
           }
     
