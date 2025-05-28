@@ -1,0 +1,28 @@
+.login-container{
+    border: 1px solid rgba(224, 224, 224, 0.616);
+    width: 30%;
+    margin: 100px auto;
+    border-radius: 40px;
+    -webkit-box-shadow: 2px 2px 15px 1px rgba(0,0,0,0.81); 
+    box-shadow: 2px 2px 15px 1px rgba(0,0,0,0.81);
+}
+.login-container > h2{
+    margin: 80px 0;
+    font-family: "Poetsen One";
+    text-align: center;
+}
+.login-container > #login-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 0 0 auto;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.login-container > #login-form > input {
+    border-radius: 20px;
+    border: 1px solid rgba(212, 206, 206, 0.747);
+    padding-left: 15px;
+    width: 300px;
+    height: 40px;
+}

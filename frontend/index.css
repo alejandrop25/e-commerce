@@ -9,7 +9,7 @@ footer{
     justify-content: space-between;
     margin-top: 20px;
 }
-.header > #header__logo{
+.header > a > #header__logo{
     margin-left: 80px;
     
 }

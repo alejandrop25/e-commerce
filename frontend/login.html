@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./login.css">
+    <title>E-commerce</title>
+</head>
+<body>
+    <div class="header">
+        <a href="./index.html"><img id="header__logo" class="animate__animated animate__jackInTheBox" src="../assets/logo.svg" alt="logo" ></a>
+        <ul class="header__home-bar">
+            <li><a class="header__home-bar-item" href="./index.html">Home</a></li>
+            <li><a class="header__home-bar-item" href="./men.html">Men</a></li>
+            <li><a class="header__home-bar-item" href="./women.html">Women</a></li>
+            <li><a class="header__home-bar-item" href="./kids.html">Kids</a></li>
+        </ul>
+        <div class="header__buttons">
+            <input class="header__search" type="search" placeholder="  Search">
+            <a href="./favorites.html" class="header__buttons-link" aria-label="Favorites">
+                <i class="fa-solid fa-heart fa-2x header__favorites"></i>
+              </a>
+              <a href="./cart.html" class="header__buttons-link" aria-label="Shopping Cart">
+                <i class="fa-solid fa-cart-shopping fa-2x header__cart"></i>
+              </a>
+              <a href="#" class="header__buttons-link" aria-label="User Profile">
+                <i class="fa-solid fa-user fa-2x header__profile"></i>
+              </a>
+        </div>
+    </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="User" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+            <p id="login-message"></p>
+        </form>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <!-- <script src="./index.js"></script> -->
+    <script src="./login.js"></script>
+</body>
+</html>
