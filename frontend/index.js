@@ -16,55 +16,55 @@ document.querySelectorAll('input[name="priceFilter"]').forEach(radio => {
   });
 
   document.addEventListener("DOMContentLoaded", function () {
-    const botoesFavorito = document.querySelectorAll(".btn-favorito");
+    const btnFavorite = document.querySelectorAll(".btn-favorite");
   
-    botoesFavorito.forEach((btn, index) => {
+    btnFavorite.forEach((btn, index) => {
       btn.addEventListener("click", function () {
         const card = btn.closest(".card");
-        const nome = card.querySelector(".card-title").textContent;
-        const preco = card.querySelector(".card-text").textContent;
-        const imagem = card.querySelector("img").getAttribute("src");
+        const name = card.querySelector(".card-title").textContent;
+        const price = card.querySelector(".card-text").textContent;
+        const image = card.querySelector("img").getAttribute("src");
   
-        const item = { id: `produto-${index}`, nome, preco, imagem };
+        const item = { id: `product-${index}`, name, price, image };
   
-        let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+        let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
   
-        const jaExiste = favoritos.some((fav) => fav.nome === item.nome && fav.preco === item.preco);
-        if (!jaExiste) {
-          favoritos.push(item);
-          localStorage.setItem("favoritos", JSON.stringify(favoritos));
-          alert("Produto adicionado aos favoritos!");
+        const exists = favorites.some((fav) => fav.name === item.name && fav.price === item.price);
+        if (!exists) {
+          favorites.push(item);
+          localStorage.setItem("favorites", JSON.stringify(favorites));
+          Swal.fire("Added to favorites.");
         } else {
-          alert("Este produto já está nos favoritos.");
+          Swal.fire("This item is already a favorite.");
         }
       });
     });
   });
 
   document.addEventListener("DOMContentLoaded", function () {
-    const botoesCarrinho = document.querySelectorAll(".btn-carrinho");
+    const btnCart = document.querySelectorAll(".btn-cart");
   
-    botoesCarrinho.forEach((btn, index) => {
+    btnCart.forEach((btn, index) => {
       btn.addEventListener("click", function () {
         const card = btn.closest(".card");
-        const nome = card.querySelector(".card-title").textContent;
-        const preco = card.querySelector(".card-text").textContent;
-        const imagem = card.querySelector("img").getAttribute("src");
+        const name = card.querySelector(".card-title").textContent;
+        const price = card.querySelector(".card-text").textContent;
+        const image = card.querySelector("img").getAttribute("src");
   
-        const item = { id: `produto-${index}`, nome, preco, imagem, quantidade: 1 };
+        const item = { id: `product-${index}`, name, price, image, quantity: 1 };
   
-        let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
   
-        const itemExistente = carrinho.find(prod => prod.nome === item.nome && prod.preco === item.preco);
+        const exists = cart.find(prod => prod.name === item.name && prod.price === item.price);
   
-        if (itemExistente) {
-          itemExistente.quantidade += 1;
+        if (exists) {
+          exists.quantity += 1;
         } else {
-          carrinho.push(item);
+          cart.push(item);
         }
   
-        localStorage.setItem("carrinho", JSON.stringify(carrinho));
-        alert("Produto adicionado ao carrinho!");
+        localStorage.setItem("cart", JSON.stringify(cart));
+        Swal.fire("Item added to cart.");
       });
     });
   });

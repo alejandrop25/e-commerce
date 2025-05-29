@@ -10,15 +10,14 @@ footer{
     margin-top: 20px;
 }
 .header > a > #header__logo{
-    margin-left: 80px;
-    
+    margin: 20px 0 0 80px;
 }
 .header > .header__home-bar{
     display: flex;
-    gap: 70px;
+    gap: 100px;
     list-style-type: none;
-    font-family: "Poetsen One", sans-serif;
-    font-weight: 200;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 300;
     font-size: 22px;
     font-weight: 450;
     margin-top: 25px;

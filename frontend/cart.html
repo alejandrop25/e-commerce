@@ -39,32 +39,32 @@
     </div>
     <div class="container mt-4">
         <h1>Cart</h1>
-        <div id="carrinho-container" class="row"></div>
+        <div id="cart-container" class="row"></div>
     </div>
     <footer>
 
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-          const container = document.getElementById("carrinho-container");
-          const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+          const container = document.getElementById("cart-container");
+          const cart = JSON.parse(localStorage.getItem("cart")) || [];
     
-          if (carrinho.length === 0) {
+          if (cart.length === 0) {
             container.innerHTML = "<p>Empty.</p>";
             return;
           }
     
-          carrinho.forEach((item, index) => {
+          cart.forEach((item, index) => {
             const col = document.createElement("div");
             col.className = "col-md-4 mb-4";
             col.innerHTML = `
               <div class="card">
-                <img src="${item.imagem}" class="card-img-top" alt="${item.nome}">
+                <img src="${item.image}" class="card-img-top" alt="${item.name}">
                 <div class="card-body">
-                  <h5 class="card-title">${item.nome}</h5>
-                  <p class="card-text">${item.preco}</p>
-                  <p class="card-text">Quantidade: ${item.quantidade}</p>
-                  <button class="btn btn-danger" onclick="removerDoCarrinho(${index})">Remover</button>
+                  <h5 class="card-title">${item.name}</h5>
+                  <p class="card-text">${item.price}</p>
+                  <p class="card-text">Quantity: ${item.quantity}</p>
+                  <button class="btn btn-danger" onclick="removeFromCart(${index})">Remove</button>
                 </div>
               </div>
             `;
@@ -72,10 +72,10 @@
           });
         });
     
-        function removerDoCarrinho(index) {
-          let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-          carrinho.splice(index, 1);
-          localStorage.setItem("carrinho", JSON.stringify(carrinho));
+        function removeFromCart(index) {
+          let cart = JSON.parse(localStorage.getItem("cart")) || [];
+          cart.splice(index, 1);
+          localStorage.setItem("cart", JSON.stringify(cart));
           location.reload();
         }
     </script>

@@ -39,7 +39,7 @@
     </div>
     <div class="container mt-4">
         <h1>Favorites</h1>
-        <div id="favoritos-container" class="row"></div>
+        <div id="favorites-container" class="row"></div>
     </div>
     <footer>
 
@@ -48,24 +48,24 @@
     <script src="./index.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-          const container = document.getElementById("favoritos-container");
-          const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+          const container = document.getElementById("favorites-container");
+          const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
     
-          if (favoritos.length === 0) {
+          if (favorites.length === 0) {
             container.innerHTML = "<p>Empty.</p>";
             return;
           }
     
-          favoritos.forEach((item) => {
+          favorites.forEach((item) => {
             const col = document.createElement("div");
             col.className = "col-md-4 mb-4";
             col.innerHTML = `
               <div class="card">
-                <img src="${item.imagem}" class="card-img-top" alt="${item.nome}">
+                <img src="${item.image}" class="card-img-top" alt="${item.name}">
                 <div class="card-body">
-                  <h5 class="card-title">${item.nome}</h5>
-                  <p class="card-text">${item.preco}</p>
-                  <button class="btn btn-danger" onclick="removerFavorito('${item.id}')">Remover</button>
+                  <h5 class="card-title">${item.name}</h5>
+                  <p class="card-text">${item.price}</p>
+                  <button class="btn btn-danger" onclick="removeFromFavorite('${item.id}')">Remove</button>
                 </div>
               </div>
             `;
@@ -73,10 +73,10 @@
           });
         });
     
-        function removerFavorito(id) {
-          let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
-          favoritos = favoritos.filter((item) => item.id !== id);
-          localStorage.setItem("favoritos", JSON.stringify(favoritos));
+        function removeFromFavorite(id) {
+          let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+          favorites = favorites.filter((item) => item.id !== id);
+          localStorage.setItem("favorites", JSON.stringify(favorites));
           location.reload();
         }
       </script>

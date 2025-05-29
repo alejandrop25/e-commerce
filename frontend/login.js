@@ -1,4 +1,4 @@
-document.getElementById('loginForm').addEventListener('submit', function (event) {
+document.getElementById('login-form').addEventListener('submit', function (event) {
     event.preventDefault(); 
   
     const username = document.getElementById('username').value;
@@ -9,9 +9,9 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
   
     if (username === validUser && password === validPass) {
       document.getElementById('message').style.color = 'green';
-      document.getElementById('message').textContent = "Login bem-sucedido!";
+      document.getElementById('message').textContent = "Login successful!";
     } else {
       document.getElementById('message').style.color = 'red';
-      document.getElementById('message').textContent = "Usuário ou senha inválidos!";
+      document.getElementById('message').textContent = "Invalid user/password.";
     }
 });
