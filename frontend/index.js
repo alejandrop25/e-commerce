@@ -68,3 +68,17 @@ document.querySelectorAll('input[name="priceFilter"]').forEach(radio => {
       });
     });
   });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const btnSearch = document.getElementById("search-input");
+  btnSearch.addEventListener("change", function() {
+    const text = btnSearch.value.trim().toLowerCase();
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+      const title = card.querySelector(".card-title").textContent.toLowerCase();
+      const show = title.includes(text);
+      card.style.display = show ? "block" : "none";
+    })
+  })
+})
