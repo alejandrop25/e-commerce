@@ -39,6 +39,13 @@ document.querySelectorAll('input[name="priceFilter"]').forEach(radio => {
         }
       });
     });
+    const saveFavorite = (item) => {
+      fetch("https://localhost:3000/favorites", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(item)
+      }).then(res => res.json());
+    }
   });
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -67,6 +74,13 @@ document.querySelectorAll('input[name="priceFilter"]').forEach(radio => {
         Swal.fire("Item added to cart.");
       });
     });
+    const addToCart = (item) => {
+      fetch("https://localhost:3000/cart", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(item)
+      }).then(res => res.json());
+    }
   });
 
 
