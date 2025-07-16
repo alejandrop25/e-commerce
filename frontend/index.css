@@ -12,6 +12,7 @@ footer{
 }
 .header > a > #header__logo{
     margin: 20px 0 0 80px;
+    margin-left: 20px;
 }
 .header > .header__home-bar{
     display: flex;
