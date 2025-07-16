@@ -9,10 +9,10 @@ document.getElementById('login-form').addEventListener('submit', function (event
   
     if (username === validUser && password === validPass) {
       document.getElementById('login-message').style.color = 'green';
-      document.getElementById('login-message').textContent = "Login successful!";
+      document.getElementById('login-message').textContent = "Login realizado.";
       setTimeout(() => window.location.replace("./index.html"), 2000);
     } else {
       document.getElementById('login-message').style.color = 'red';
-      document.getElementById('login-message').textContent = "Invalid user/password.";
+      document.getElementById('login-message').textContent = "Usuário ou senha inválidos.";
     }
 });

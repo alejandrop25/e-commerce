@@ -33,9 +33,9 @@ document.querySelectorAll('input[name="priceFilter"]').forEach(radio => {
         if (!exists) {
           favorites.push(item);
           localStorage.setItem("favorites", JSON.stringify(favorites));
-          Swal.fire("Added to favorites.");
+          Swal.fire("Adicionado aos favoritos.");
         } else {
-          Swal.fire("This item is already a favorite.");
+          Swal.fire("Esse item já está nos favoritos.");
         }
       });
     });
@@ -71,7 +71,7 @@ document.querySelectorAll('input[name="priceFilter"]').forEach(radio => {
         }
   
         localStorage.setItem("cart", JSON.stringify(cart));
-        Swal.fire("Item added to cart.");
+        Swal.fire("Item adicionado ao carrinho.");
       });
     });
     const addToCart = (item) => {

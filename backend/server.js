@@ -8,7 +8,7 @@ app.use(express.json);
 
 const PORT = 3000;
 
-mongoose.connect("", {
+mongoose.connect("mongodb+srv://alejandrop2506:password@cluster0.trhco.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
